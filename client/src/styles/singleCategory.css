@@ -1,0 +1,16 @@
+html {box-sizing: border-box;}
+*, *:before, *::after {box-sizing: inherit;}
+
+#singleCatTitle {
+    text-transform: capitalize;
+}
+
+.multiListingContainer {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.multiListingName {
+    padding-left: 8px;
+}

@@ -1,10 +1,10 @@
 import { createStore, combineReducers } from 'redux'
 
-import exampleReducer from './reducers/exampleReducer'
+import categoriesReducer from './reducers/categoriesReducer'
 // import all reducers here
 
 const rootReducer = combineReducers({
-  exampleReducer
+  categoriesReducer
   // put reducers here
 })
 

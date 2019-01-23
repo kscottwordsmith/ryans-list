@@ -1,17 +1,25 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { makeACall } from '../actions/example'
+import { getCategories } from '../actions/categories'
+import CategoryMap from './CategoryMap'
+import '../styles/Home.css'
 
 class Home extends Component {
   componentDidMount() {
-    makeACall()
+    getCategories()
   }
   
   render() {
     return (
-      <div>
-        <h1>Home</h1>
-        <p>{this.props.example}</p>
+      <div id="homeContainer">
+        <div id="addListContainer">
+          <h3 id="addListingHead">ryans list</h3>
+          <div id="belowListHead">
+            <Link to={`/add-listing`}>Add Listing</Link>
+          </div>
+        </div>
+        <div><CategoryMap /></div>
       </div>
     )
   }
@@ -19,7 +27,7 @@ class Home extends Component {
 
 function mapStateToProps(appState) {
   return {
-    example: appState.exampleReducer.example
+    categories: appState.categoriesReducer.categories
   }
 }
 
