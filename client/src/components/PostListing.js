@@ -45,35 +45,38 @@ class PostListing extends Component {
         })
         return (
             <Fragment>
-                <form onSubmit={this.handleSubmit} autoComplete="off" id="inputform">
-                    <input
-                        type="text"
-                        onChange={this.handleChange}
-                        value={this.state.listingName}
-                        placeholder="listing name"
-                        name="listingName"
-                        id="nameInput"
-                    />
-                    <textarea
-                        onChange={this.handleChange}
-                        value={this.state.text}
-                        placeholder="listing text"
-                        cols="50"
-                        name="text"
-                    />
-                    <select onChange={this.handleChange} name="categoryId" defaultValue="" required id="catIdSelect">
-                        <option value="" disabled hidden>Choose category</option>
-                        {selectArray}
-                    </select>
-                    <input
-                        type="text"
-                        onChange={this.handleChange}
-                        value={this.state.coverPhoto}
-                        placeholder="http://placehold.it/75x75"
-                        name="coverPhoto"
-                    />
-                    <button onClick={this.handleSubmit} id="listButton">Submit</button>
-                </form>
+                <div id="submitPageContainer">
+                    <button onClick={this.handleSubmit} id="postBack"><i className="fa fa-chevron-left"></i></button>
+                    <form onSubmit={this.handleSubmit} autoComplete="off" id="inputform">
+                        <input
+                            type="text"
+                            onChange={this.handleChange}
+                            value={this.state.listingName}
+                            placeholder="listing name"
+                            name="listingName"
+                            id="nameInput"
+                        />
+                        <textarea
+                            onChange={this.handleChange}
+                            value={this.state.text}
+                            placeholder="listing text"
+                            cols="50"
+                            name="text"
+                        />
+                        <select onChange={this.handleChange} name="categoryId" defaultValue="" required id="catIdSelect">
+                            <option value="" disabled hidden>Choose category</option>
+                            {selectArray}
+                        </select>
+                        <input
+                            type="text"
+                            onChange={this.handleChange}
+                            value={this.state.coverPhoto}
+                            placeholder="paste image url here"
+                            name="coverPhoto"
+                        />
+                        <button onClick={this.handleSubmit} id="listButton">Submit</button>
+                    </form>
+                </div>
             </Fragment>
         )
     }

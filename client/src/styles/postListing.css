@@ -1,6 +1,23 @@
 html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
+#submitPageContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#postBack {
+    background: none;
+    border: none;
+}
+
+#postBack:hover {
+    background: rgb(128, 124, 124);
+    color: white;
+    cursor: pointer;
+}
+
 #inputform {
     display: flex;
     flex-direction: column;
